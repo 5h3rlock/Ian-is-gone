@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>he's gone.com</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>he's gone.com</h1>
+    </header>
+    <main class="site-main">
+      <section class="countdown-card" aria-live="polite">
+        <div
+          class="countdown"
+          id="countdown"
+          aria-label="Countdown to 8:00 PM on February 4th"
+        >
+          <div class="time-block">
+            <div class="time-value" id="hours">--</div>
+            <div class="time-label">Hours</div>
+          </div>
+          <div class="time-separator">:</div>
+          <div class="time-block">
+            <div class="time-value" id="minutes">--</div>
+            <div class="time-label">Minutes</div>
+          </div>
+        </div>
+        <p class="message" id="message" role="status"></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
