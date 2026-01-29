@@ -49,18 +49,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 4vw, 2.5rem);
+  gap: clamp(0.75rem, 3vw, 1.75rem);
   flex-wrap: wrap;
 }
 
 .time-block {
-  min-width: 120px;
+  min-width: 110px;
+  padding: 0.85rem 0.9rem 1rem;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(226, 232, 240, 0.7)
+  );
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
 }
 
 .time-value {
   font-size: clamp(2.75rem, 9vw, 5.75rem);
   font-weight: 700;
   letter-spacing: 0.03em;
+  text-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
 }
 
 .time-label {
@@ -90,6 +100,6 @@ body {
   }
 
   .time-block {
-    min-width: 100px;
+    min-width: 96px;
   }
 }
