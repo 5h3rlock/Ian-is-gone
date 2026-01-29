@@ -55,6 +55,16 @@ body {
 
 .time-block {
   min-width: 120px;
+  padding: 1.1rem 1.4rem;
+  border-radius: 18px;
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 18px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .time-value {
@@ -75,6 +85,18 @@ body {
   font-size: clamp(2rem, 7vw, 4.5rem);
   font-weight: 600;
   color: #94a3b8;
+  opacity: 0.65;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
 }
 
 .message {
@@ -91,5 +113,11 @@ body {
 
   .time-block {
     min-width: 100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .time-separator {
+    animation: none;
   }
 }
