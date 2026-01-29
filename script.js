@@ -8,6 +8,7 @@ const TARGET_MINUTE = 0;
 
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
 const messageEl = document.getElementById("message");
 
 function getZonedParts(date, timeZone) {
@@ -114,16 +115,19 @@ function updateCountdown() {
   if (diffMs <= 0) {
     hoursEl.textContent = "00";
     minutesEl.textContent = "00";
+    secondsEl.textContent = "00";
     messageEl.textContent = "It's 8:00 PM - time's up.";
     return;
   }
 
-  const totalMinutes = Math.floor(diffMs / 60000);
-  const hours = Math.floor(totalMinutes / 60);
-  const minutes = totalMinutes % 60;
+  const totalSeconds = Math.floor(diffMs / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
 
   hoursEl.textContent = String(hours).padStart(2, "0");
   minutesEl.textContent = String(minutes).padStart(2, "0");
+  secondsEl.textContent = String(seconds).padStart(2, "0");
   messageEl.textContent = "";
 }
 
