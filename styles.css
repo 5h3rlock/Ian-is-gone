@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  background: radial-gradient(circle at top, #f8fafc, #e2e8f0);
+}
+
+.site-header {
+  padding: 1.5rem 1rem 0.5rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.site-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.countdown-card {
+  width: min(90vw, 640px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 24px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 2.5rem);
+  flex-wrap: wrap;
+}
+
+.time-block {
+  min-width: 120px;
+}
+
+.time-value {
+  font-size: clamp(2.75rem, 9vw, 5.75rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.time-label {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #64748b;
+}
+
+.time-separator {
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.message {
+  margin: 1.5rem 0 0;
+  min-height: 1.5rem;
+  font-size: 1.05rem;
+  color: #b91c1c;
+}
+
+@media (max-width: 520px) {
+  .time-separator {
+    display: none;
+  }
+
+  .time-block {
+    min-width: 100px;
+  }
+}
