@@ -114,7 +114,7 @@ function updateCountdown() {
   if (diffMs <= 0) {
     hoursEl.textContent = "00";
     minutesEl.textContent = "00";
-    messageEl.textContent = "It's 8:00 PM — time's up.";
+    messageEl.textContent = "It's 8:00 PM - time's up.";
     return;
   }
 
