@@ -17,7 +17,7 @@ Then visit: `http://localhost:5173`
 
 Place your image file at the project root with this exact name:
 
-`garda.jpg`
+`IMG-20260307-WA0000.jpg`
 
 ## Netlify deployment
 
