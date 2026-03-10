@@ -1,17 +1,23 @@
-# he's gone.com countdown
+# Simple frontend image page
 
-Single-page countdown site targeting **8:00 PM on February 4th (Europe/Dublin)**.
+This is a static frontend-only page.
 
 ## Run locally
 
 Because this is a static site, you can open `index.html` directly in your browser.
-For a local server (recommended so scripts load consistently):
+For a local server:
 
 ```bash
 python3 -m http.server 5173
 ```
 
 Then visit: `http://localhost:5173`
+
+## Image file
+
+Place your image file at the project root with this exact name:
+
+`garda.jpg`
 
 ## Netlify deployment
 
